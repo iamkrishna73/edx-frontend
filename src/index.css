@@ -1,0 +1,88 @@
+body {
+  margin: 10px;
+} /* #NotFoundPage */
+.not-found-container {
+  padding-inline: 26px;
+}
+
+.not-found-container .link-button {
+  width: 100%;
+  background-color: #161616;
+  color: white;
+}
+
+/* styles.css */
+.custom-button {
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+.custom-link {
+  text-decoration: none;
+  color: inherit;
+}
+.custom-link:hover {
+  text-decoration: underline;
+}
+
+.logo-data {
+  font-size: 5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-left: 500px;
+}
+/* Navbar Brand Styling */
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007bff !important;
+  text-decoration: none;
+}
+
+/* Navbar Link Styling */
+.nav-link {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #555 !important;
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #007bff !important;
+  text-decoration: underline;
+}
+
+/* Custom Button Styling */
+.custom-button {
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Link Inside Button */
+.custom-link {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+}
+
+.custom-link:hover {
+  color: #fff;
+  text-decoration: none;
+}
+   
