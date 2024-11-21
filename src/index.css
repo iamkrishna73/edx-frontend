@@ -43,7 +43,7 @@ body {
 .navbar-brand {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #007bff !important;
+  /* color: #007bff !important; */
   text-decoration: none;
 }
 
@@ -86,3 +86,9 @@ body {
   text-decoration: none;
 }
    
+.signup-button {
+  margin-right: 20px;
+}
+.forgertpassword {
+  text-decoration: none;
+}

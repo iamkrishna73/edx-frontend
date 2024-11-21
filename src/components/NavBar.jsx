@@ -5,7 +5,7 @@ const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand text-dark" href="#">
           Edx
         </a>
         <button
@@ -44,9 +44,9 @@ const NavBar = () => {
           </ul>
           <div className="ms-auto">
           
-              <Link to="/login" className="custom-link btn btn-outline-primary custom-button">
+            <Link to="/auth/login" className="custom-link btn btn-outline-primary custom-button">
                 Login
-              </Link>
+              </Link> 
         
           </div>
         </div>
