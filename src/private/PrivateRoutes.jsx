@@ -1,8 +1,10 @@
-import { Navigate, Outlet } from 'react-router-dom'
+import { Navigate} from 'react-router-dom'
 import PrivateHome from './PrivateHome';
 
+
 const PrivateRoutes = () => {
-  let auth = {'token':true}
+
+   let auth = {'token':data}
 return (
     auth.token ? <PrivateHome/>: <Navigate to='/login'/>
   )

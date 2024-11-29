@@ -9,7 +9,7 @@ import AddEnquriy from "./private/AddEnquriy";
 import ViewEnquriy from "./private/ViewEnquriy";
 import PrivateNavbar from "./private/PrivateNavbar";
 import PrivateRoutes from "./private/PrivateRoutes";
-import AuthDashBoard from "./auth/AuthDashBoard";
+// import AuthDashBoard from "./auth/AuthDashBoard";
 import ForgotPassword from "./auth/ForgetPassword";
 import UnlockAccount from "./auth/UnlockAccount";
 
@@ -20,12 +20,10 @@ function App() {
         {/* Public Routes */}
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="auth" element={<AuthDashBoard />}>
             <Route path="login" element={<Login />} />
             <Route path="forgetpassword" element={<ForgotPassword />} />
             <Route path="signup" element={<Signup />} />
             <Route path="unlockaccount" element={<UnlockAccount />} />
-          </Route>
         </Route>
 
         {/* Protected Routes */}

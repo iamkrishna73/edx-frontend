@@ -1,7 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 
-function ForgotPassword({ onNextStep }) {
+function ForgotPassword() {
   const {
     register,
     handleSubmit,
@@ -12,28 +12,30 @@ function ForgotPassword({ onNextStep }) {
     // try {
     //   await axios.post('/api/forgot-password', data); // Replace with backend API
     //   alert('Recovery email sent!');
-      onNextStep('unlockAccount', data.email);
+    //  onNextStep('unlockAccount', data.email);
     // } catch (error) {
     //   console.error('Error sending recovery email:', error);
     // }
   };
 
   return (
+    <div className="container d-flex align-items-center justify-content-center auth-container">
+      <div className="row w-100">
     <div className="col-md-4 d-flex align-items-center">
       <div className="w-100">
         <h2 className="text-center mb-4">Forget Password</h2>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-3">
             <input
-              type="text"
-              id="username"
-              placeholder="username"
+              type="email"
+              id="email"
+              placeholder="Recover email"
               className={`form-control ${errors.email ? "is-invalid" : ""}`}
               {...register("email", {
-                required: "Username is required",
+                required: "email is required",
               })}
             />
-            {errors.username && (
+            {errors.email && (
               <div className="invalid-feedback">{errors.email.message}</div>
             )}
           </div>
@@ -42,6 +44,11 @@ function ForgotPassword({ onNextStep }) {
             Recover Password
           </button>
         </form>
+      </div>
+    </div>
+      <div className="col-md-6 d-flex align-items-center justify-content-center">
+          <h1 className="logo-data">Start learning with edX</h1>
+        </div>
       </div>
     </div>
   );

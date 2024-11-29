@@ -1,16 +1,23 @@
 body {
   margin: 10px;
-} /* #NotFoundPage */
+
+  padding: 0;
+  min-height: 100vh; /* Ensure the body covers the full height of the viewport */
+  display: flex;
+  flex-direction: column;
+} 
 .not-found-container {
   padding-inline: 26px;
 }
-
+.image-data {
+  height: 300px;
+  width: auto;
+}
 .not-found-container .link-button {
   width: 100%;
   background-color: #161616;
   color: white;
 }
-
 /* styles.css */
 .custom-button {
   border-radius: 5px;
@@ -18,12 +25,10 @@ body {
   font-size: 16px;
   transition: background-color 0.3s ease;
 }
-
 .custom-button:hover {
   background-color: #0056b3;
   color: #fff;
 }
-
 .custom-link {
   text-decoration: none;
   color: inherit;
@@ -31,7 +36,6 @@ body {
 .custom-link:hover {
   text-decoration: underline;
 }
-
 .logo-data {
   font-size: 5rem;
   font-weight: bold;
@@ -46,7 +50,6 @@ body {
   /* color: #007bff !important; */
   text-decoration: none;
 }
-
 /* Navbar Link Styling */
 .nav-link {
   font-size: 1rem;
@@ -55,12 +58,10 @@ body {
   text-decoration: none;
   transition: color 0.3s ease, text-decoration 0.3s ease;
 }
-
 .nav-link:hover {
   color: #007bff !important;
   text-decoration: underline;
 }
-
 /* Custom Button Styling */
 .custom-button {
   border-radius: 20px;
@@ -68,27 +69,43 @@ body {
   font-size: 0.9rem;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-
 .custom-button:hover {
   background-color: #007bff;
   color: #fff;
 }
-
 /* Link Inside Button */
 .custom-link {
   text-decoration: none;
   color: inherit;
   font-weight: 500;
 }
-
 .custom-link:hover {
   color: #fff;
   text-decoration: none;
 }
-   
+.signin-forgetpassword {
+  margin-top: 20px;
+}
 .signup-button {
   margin-right: 20px;
+  width: 160px;
 }
 .forgertpassword {
+  color: #161616;
   text-decoration: none;
+}
+.forgertpassword:hover{
+  color: red;
+  text-decoration: none;
+}
+.auth-container {
+  margin-top: 100px;
+}
+.footer-data {
+  margin-top: auto; /* Push the text to the bottom */
+  text-align: center; /* Center the text horizontally */
+  padding: 1rem; /* Add some spacing */
+  background-color: #f8f9fa; /* Optional: Background color for the text area */
+  color: #333; /* Optional: Text color */
+  font-size: 16px; /
 }
