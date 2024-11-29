@@ -1,13 +1,12 @@
-import { Navigate} from 'react-router-dom'
-import PrivateHome from './PrivateHome';
-
+import { Navigate } from "react-router-dom";
+import PrivateHome from "./PrivateHome";
+import { useAuth } from "../context/AuthContext";
 
 const PrivateRoutes = () => {
+  const { auth } = useAuth();
 
-   let auth = {'token':data}
-return (
-    auth.token ? <PrivateHome/>: <Navigate to='/login'/>
-  )
-}
+  const isAuth = { token: auth.isAuthenticated };
+  return isAuth.token ? <PrivateHome /> : <Navigate to="/login" />;
+};
 
 export default PrivateRoutes;

@@ -1,10 +1,9 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
-import Signup from "./Signup";
 import { loginUser } from "../api";
-import PrivateRoutes from "../private/PrivateRoutes";
 import { ToastContainer, toast } from "react-toastify";
+import { useAuth } from "../context/AuthContext";
 
 const Login = () => {
   const {
@@ -13,21 +12,31 @@ const Login = () => {
     formState: { errors },
   } = useForm();
   const navigate = useNavigate();
+  const {setAuth} = useAuth();
+
 
   const onSubmit = async (data) => {
     console.log("Login Data:", data);
+  
     try {
-      const res = await loginUser(data);
-      console.log(res);
-      //PrivateRoutes(true);
+      const res = await loginUser(data); // API call to log in the user
+      console.log(res.data.username);
+  
+      // Update authentication state
+      setAuth({
+        isAuthenticated: true,
+        user: res.data.username,
+      });
+      // Redirect to the user page
+      navigate("/user");
     } catch (error) {
       const errorMessage = error.response?.data?.message || "An error occurred";
-      console.error(errorMessage);
-      toast.error(errorMessage);
+      //console.error(errorMessage);
+      toast.error(errorMessage); // Display error message to the user
     }
-    // Handle login logic (e.g., API call)
-    navigate("/user");
+
   };
+  
 
   const handleSignUpRedirect = () => {
     // onNextStep("signUp");

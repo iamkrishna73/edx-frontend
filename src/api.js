@@ -11,6 +11,6 @@ export async function unlockUserAccout(data) {
 }
 export async function loginUser(data) {
   console.log(data);
-  const res = await axios.post(`${api_url}/auth/login`, data);
-  return res;
+  return await axios.post(`${api_url}/auth/login`, data);
+
 }

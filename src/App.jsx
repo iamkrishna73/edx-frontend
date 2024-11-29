@@ -12,6 +12,7 @@ import PrivateRoutes from "./private/PrivateRoutes";
 // import AuthDashBoard from "./auth/AuthDashBoard";
 import ForgotPassword from "./auth/ForgetPassword";
 import UnlockAccount from "./auth/UnlockAccount";
+import { AuthProvider } from "./context/AuthContext";
 
 function App() {
   return (
@@ -20,10 +21,10 @@ function App() {
         {/* Public Routes */}
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-            <Route path="login" element={<Login />} />
-            <Route path="forgetpassword" element={<ForgotPassword />} />
-            <Route path="signup" element={<Signup />} />
-            <Route path="unlockaccount" element={<UnlockAccount />} />
+          <Route path="login" element={<Login />} />
+          <Route path="forgetpassword" element={<ForgotPassword />} />
+          <Route path="signup" element={<Signup />} />
+          <Route path="unlockaccount" element={<UnlockAccount />} />
         </Route>
 
         {/* Protected Routes */}
@@ -32,7 +33,6 @@ function App() {
           <Route path="view-enquriy" element={<ViewEnquriy />} />
         </Route>
 
-        {/* Catch-All Route */}
         <Route path="*" element={<NoPage />} />
       </Routes>
     </BrowserRouter>
@@ -40,4 +40,3 @@ function App() {
 }
 
 export default App;
-
