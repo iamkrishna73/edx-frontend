@@ -14,3 +14,11 @@ export async function loginUser(data) {
   return await axios.post(`${api_url}/auth/login`, data);
 
 }
+export async function forgetPassword(data) {
+  console.log(data);
+  return await axios.get(`${api_url}/auth/forget-password`, {
+    params:data
+  });
+
+}
+

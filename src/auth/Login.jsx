@@ -12,17 +12,15 @@ const Login = () => {
     formState: { errors },
   } = useForm();
   const navigate = useNavigate();
-  const {setAuth} = useAuth();
-
+  const { setAuth } = useAuth();
 
   const onSubmit = async (data) => {
     console.log("Login Data:", data);
-  
+
     try {
       const res = await loginUser(data); // API call to log in the user
       console.log(res.data.username);
-  
-      // Update authentication state
+
       setAuth({
         isAuthenticated: true,
         user: res.data.username,
@@ -31,15 +29,11 @@ const Login = () => {
       navigate("/user");
     } catch (error) {
       const errorMessage = error.response?.data?.message || "An error occurred";
-      //console.error(errorMessage);
       toast.error(errorMessage); // Display error message to the user
     }
-
   };
-  
 
   const handleSignUpRedirect = () => {
-    // onNextStep("signUp");
     navigate("/signup");
   };
 
