@@ -15,15 +15,14 @@ const Login = () => {
   const { setAuth } = useAuth();
 
   const onSubmit = async (data) => {
-    console.log("Login Data:", data);
+   // console.log("Login Data:", data);
 
     try {
       const res = await loginUser(data); // API call to log in the user
-      console.log(res.data.username);
-
+      //console.log(res.data);
       setAuth({
         isAuthenticated: true,
-        user: res.data.username,
+        user: res.data,
       });
       // Redirect to the user page
       navigate("/user");
@@ -71,7 +70,7 @@ const Login = () => {
                 </div>
                 <div className="mb-3">
                   <input
-                    type="text"
+                    type="password"
                     id="password"
                     placeholder="Password"
                     className={`form-control ${

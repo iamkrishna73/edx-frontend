@@ -21,4 +21,18 @@ export async function forgetPassword(data) {
   });
 
 }
+export async function getCourseName() {
+  return await axios.get(`${api_url}/user/enquiries/course-names`)
+}
+
+export async function getStatus() {
+  return await axios.get(`${api_url}/user/enquiries/status-name`)
+}
+
+export async function addEnquiry(id, data) {
+  return await axios.post(`${api_url}/user/enquiries/${id}`, data) 
+}
+export async function getDashBoardData(id) {
+  return await axios.get(`${api_url}/user/enquiries/${id}`) 
+}
 

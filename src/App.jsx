@@ -7,12 +7,10 @@ import Login from "./auth/Login";
 import Signup from "./auth/Signup";
 import AddEnquriy from "./private/AddEnquriy";
 import ViewEnquriy from "./private/ViewEnquriy";
-import PrivateNavbar from "./private/PrivateNavbar";
 import PrivateRoutes from "./private/PrivateRoutes";
-// import AuthDashBoard from "./auth/AuthDashBoard";
 import ForgotPassword from "./auth/ForgetPassword";
 import UnlockAccount from "./auth/UnlockAccount";
-import { AuthProvider } from "./context/AuthContext";
+import Dashboard from "./private/Dashboard";
 
 function App() {
   return (
@@ -29,6 +27,7 @@ function App() {
 
         {/* Protected Routes */}
         <Route path="user" element={<PrivateRoutes />}>
+          <Route index element= {<Dashboard/>} />
           <Route path="add-enquriy" element={<AddEnquriy />} />
           <Route path="view-enquriy" element={<ViewEnquriy />} />
         </Route>
