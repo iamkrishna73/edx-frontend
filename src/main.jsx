@@ -6,11 +6,14 @@ import "./index.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "react-toastify/dist/ReactToastify.css";
 import { AuthProvider } from "./context/AuthContext.jsx";
+import { CourseDataProvider } from "./context/CourseDataContext.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <AuthProvider>
-      <App />
+      <CourseDataProvider>
+        <App />
+      </CourseDataProvider>
     </AuthProvider>
   </React.StrictMode>
 );
