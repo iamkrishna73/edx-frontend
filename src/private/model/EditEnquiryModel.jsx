@@ -71,7 +71,7 @@ const EditEnquiryModel = ({ onClose, initialData, onSave }) => {
               <div className="form-container">
                 {/* Student Name */}
                 <div className="form-group">
-                  <label htmlFor="studentName">Student Name</label>
+                  <label htmlFor="studentName">Supplier Name</label>
                   <input
                     type="text"
                     className="form-control"
@@ -90,7 +90,7 @@ const EditEnquiryModel = ({ onClose, initialData, onSave }) => {
 
                 {/* Course */}
                 <div className="form-group">
-                  <label htmlFor="course">Course</label>
+                  <label htmlFor="course">Category</label>
                   <select
                     className="form-control"
                     id="course"
@@ -99,7 +99,7 @@ const EditEnquiryModel = ({ onClose, initialData, onSave }) => {
                     })}
                   >
                     <option value="" disabled>
-                      Select a course
+                    Category
                     </option>
                     {courses.map((course) => (
                       <option key={course.courseId} value={course.courseName}>

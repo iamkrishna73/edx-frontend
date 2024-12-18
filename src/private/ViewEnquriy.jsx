@@ -25,7 +25,7 @@ const ViewEnquiry = () => {
     <div className="container mt-4">
       <div className="card">
         <div className="card-header">
-          <h4>View Student Enquiries</h4>
+          <h4>View Suppiler Enquiries</h4>
         </div>
         <div className="card-body">
           {/* Row containing all dropdowns */}
@@ -33,15 +33,14 @@ const ViewEnquiry = () => {
             {/* Courses Dropdown */}
             <div className="col-md-4 mb-3">
               <label htmlFor="courses" className="form-label">
-                Courses
-              </label>
+              Category              </label>
               <select
                 id="courses"
                 className="form-control"
                 value={selectedCourse}
                 onChange={handleCourseChange}
               >
-                <option value="">Select Course</option>
+                <option value="">Category</option>
                 {courses.map((course) => (
                   <option key={course.courseId} value={course.courseName}>
                     {course.courseName}

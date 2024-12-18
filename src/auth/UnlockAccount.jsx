@@ -91,7 +91,7 @@ const UnlockAccount = () => {
         </div>
 
         <div className="col-md-6 d-flex align-items-center justify-content-center">
-          <h1 className="logo-data">Start learning with edX</h1>
+          <h1 className="logo-data">Connect with verified sellers</h1>
         </div>
       </div>
     </div>

@@ -45,12 +45,13 @@ const AddEnquiry = () => {
             <div className="col-md-4">
               <div className="mb-3">
                 <label htmlFor="studentName" className="form-label">
-                  Student Name
+                  Suppliar Name
                 </label>
                 <input
                   type="text"
                   id="studentName"
-                  placeholder="Student Name"
+                  placeholder="Suppliar Name
+"
                   className={`form-control ${
                     errors.studentName ? "is-invalid" : ""
                   }`}
@@ -122,7 +123,7 @@ const AddEnquiry = () => {
 
               <div className="mb-3">
                 <label htmlFor="course" className="form-label">
-                  Course
+                  Category{" "}
                 </label>
                 <select
                   id="course"
@@ -131,7 +132,7 @@ const AddEnquiry = () => {
                   }`}
                   {...register("course", { required: "Course is required" })}
                 >
-                  <option value="">Select Course</option>
+                  <option value="">Category</option>
                   {courses.map((course) => (
                     <option key={course.courseId} value={course.courseName}>
                       {course.courseName}

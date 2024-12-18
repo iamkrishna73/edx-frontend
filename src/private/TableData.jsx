@@ -108,7 +108,7 @@ const TableData = ({ selectedCourse, selectedStatus, selectedClassMode }) => {
       sortable: false,
     },
     {
-      name: "Student Name",
+      name: "Supplier Name",
       selector: (row) => row.studentName,
       sortable: true,
     },
