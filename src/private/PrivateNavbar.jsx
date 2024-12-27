@@ -1,7 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom";// Ensure the CSS is imported here.
+import { Link } from "react-router-dom"; // Ensure the CSS is imported here.
+import { useAuth } from "../context/AuthContext";
 
 const PrivateNavbar = () => {
+  const { setAuth } = useAuth();
+
+  const handleChange = () => {
+    setAuth({
+      isAuthenticated: false,
+      user: null,
+    });
+  };
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
@@ -22,8 +32,8 @@ const PrivateNavbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link to="/" className="nav-link">
-               Home
+              <Link to="/user" className="nav-link">
+                Home
               </Link>
             </li>
             <li className="nav-item">
@@ -42,7 +52,7 @@ const PrivateNavbar = () => {
               className="btn btn-outline-primary custom-button"
               type="submit"
             >
-              <Link to="/" className="custom-link">
+              <Link to="/" onClick={handleChange} className="custom-link">
                 Log out
               </Link>
             </button>
@@ -54,4 +64,3 @@ const PrivateNavbar = () => {
 };
 
 export default PrivateNavbar;
-

@@ -5,13 +5,13 @@ import NavBar from "./NavBar";
 
 const Layout = () => {
   return (
-    <div>
+    <> 
+      <NavBar />
       <main>
-        <NavBar />
         <Outlet />
       </main>
-      <Footer/>
-    </div>
+      <Footer />
+    </>
   );
 };
 

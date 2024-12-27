@@ -44,7 +44,7 @@ const NavBar = () => {
           </ul>
           <div className="ms-auto">
           
-            <Link to="/auth/login" className="custom-link btn btn-outline-primary custom-button">
+            <Link to="/login" onClick={() => {}} className="custom-link btn btn-outline-primary custom-button">
                 Login
               </Link> 
         
